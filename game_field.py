@@ -4,19 +4,34 @@ import numpy as np
 
 board_game = []
 
-for i in range(consts.GAME_ROWS):
-    row = []
-    for j in range(consts.GAME_COLS):
-        row.append(0)
-    board_game.append(row)
+def build_board():
+    for i in range(consts.GAME_COLS):
+        counter = 0
+        row = []
+        for j in range(consts.GAME_ROWS):
+            if counter >= 1:
+                row.append(0)
+            else:
+                row.append("mine")
+                counter += 1
+        for h in range(10):
+            random.shuffle(board_game[i])
+        board_game.append(row)
 
-print(board_game)
+    return board_game
 
 
-mine = [1,"mine"] #להוסיף את התמונה
 
-for i in range(len(board_game)):
-    for j in range(len(board_game[i])):
-        board_game.insert(j,random.choice(mine))
-print(board_game)
 
+
+
+# def mine_img():
+#     soldier_img = pygame.image.load(consts.MINE_IMAGE)
+#     soldier_img = pygame.transform.scale(soldier_img, (75, 25))
+#     return soldier_img
+#
+# screen.blit(soldier(), (0, 0))
+    # print(board_game)
+
+build_board()
+random_mines()
