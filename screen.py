@@ -28,6 +28,7 @@ def normal_screen():
     screen = build_screen()
     text1, text2 = text()
 
+
     text_rect1 = text1.get_rect()
     text_rect2 = text2.get_rect()
     text_rect1.center = (140, 10)
