@@ -1,0 +1,72 @@
+import game_field
+import consts
+import pygame
+
+def key_up(y):
+    y -= 25
+    return y
+
+def key_down(y):
+    y += 25
+    return y
+
+def key_right(x):
+    x += 25
+    return x
+
+def key_left(x):
+    x -= 25
+    return x
+
+def in_screen(x, y):
+    if x > consts.SCREEN_SIZE[0] or x < 0 or y > consts.SCREEN_SIZE[1] or y < 0:
+        return False
+    else:
+        return True
+
+
+def leg_soldier(board):
+    leg1 =[]
+    for i in range(len(board)):
+        for j in range(len(board(i))):
+            if board[i][j] == "soldier":
+                leg1 = [i-3,j]
+                return leg1
+            break
+        break
+    leg2 = [leg1[0],leg1[1] + 1]
+    return leg1, leg2
+
+def body_soldier(board):
+    body = []
+    for i in range(len(board)):
+        for j in range(len(board(i))):
+            if board[i][j] == "soldier":
+                body.append([i,j])
+                if len(body) == 6:
+                    break
+    return body
+
+def index_soldier(body,leg):
+    index_list = body + leg
+    return index_list
+
+index_soldier(body_soldier(game_field.game_board),leg_soldier(game_field.game_board))
+
+def soldier():
+    soldier_img = pygame.image.load(consts.SOLDIER_IMAGE)
+    soldier_img = pygame.transform.scale(soldier_img, (50, 100))
+    return soldier_img
+
+def night_soldier1():
+    soldier_night_img = pygame.image.load(consts.SOLDIER_NIGHT_IMAGE)
+    soldier_night_img = pygame.transform.scale(soldier_night_img, (50, 100))
+    return soldier_night_img
+
+
+
+
+
+
+
+
