@@ -5,6 +5,7 @@ import numpy as np
 board_game = []
 
 def build_board():
+    counter_20 = 0
     for i in range(consts.GAME_COLS):
         counter = 0
         row = []
@@ -14,9 +15,15 @@ def build_board():
             else:
                 row.append("mine")
                 counter += 1
-        for h in range(10):
-            random.shuffle(board_game[i])
+                counter_20 += 1
+
         board_game.append(row)
+        random.shuffle(board_game[i])
+    for i in board_game:
+        for j in i:
+            print(j, end=" ")
+        print("\r")
+
 
     return board_game
 
@@ -34,4 +41,4 @@ def build_board():
     # print(board_game)
 
 build_board()
-random_mines()
+# random_mines()
