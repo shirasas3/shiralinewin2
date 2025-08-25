@@ -6,7 +6,7 @@ MINE_IMAGE = "mine.png"
 SNAKE_IMAGE = "snake.png"
 SOLDIER_IMAGE = "soldier.png"
 SOLDIER_2_IMAGE = "soldier (2).png"
-SOLDIER_NIGTH_IMAGE =  "soldier_nigth.png"
+SOLDIER_NIGHT_IMAGE =  "soldier_night.png"
 
 IMAGE_SOLDIER_HEIGHT = 4
 IMAGE_SOLDIER_WIDTH = 2

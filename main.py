@@ -8,8 +8,8 @@ state = {
      'left':False,
      'right':False,
     'change_game' : False,
-    'running' : True
-    'touch_flag' : False
+    'running' : True,
+    'touch_flag' : False,
     'touch_mine' : False
 }
 

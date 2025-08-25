@@ -29,8 +29,8 @@ def soldier():
     soldier_img = pygame.transform.scale(soldier_img, (50, 100))
     return soldier_img
 
-def night_solider():
-    night_soldier_img = pygame.image.load(consts.SOLDIER_NIGTH_IMAGE)
+def night_soldier():
+    night_soldier_img = pygame.image.load(consts.SOLDIER_NIGHT_IMAGE)
     night_soldier_img = pygame.transform.scale(night_soldier_img, (50, 100))
     return night_soldier_img
 
@@ -40,8 +40,8 @@ def text():
     text2 = font.render(consts.HAVE_FUN, True, consts.WHITE)
     return text1, text2
 
-def mine_matrix():
-
+def mine_matrix(board_game):
+    return board_game
 
 def draw_grid():
     block_size = 25
@@ -84,7 +84,8 @@ def night_screen():
 
     while running:
         draw_grid()
-        screen.blit(night_solider(), (0, 0))
+        mine_matrix(game_field.board_game)
+        screen.blit(night_soldier(), (0, 0))
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
