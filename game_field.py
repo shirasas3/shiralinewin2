@@ -33,9 +33,9 @@ def build_board():
         for j in range(consts.GAME_ROWS):
             if board_game[i][j] == 1:
                 board_game[i][j] = "mine"
-    (21, 46)(21, 47)(21, 48)(21, 49)
-    (22, 46)(22, 47)(22, 48)(22, 49)
-    (23, 46)(23, 47)(23, 48)(23, 49)
+    # (21, 46)(21, 47)(21, 48)(21, 49)
+    # (22, 46)(22, 47)(22, 48)(22, 49)
+    # (23, 46)(23, 47)(23, 48)(23, 49)
     for i in board_game:
 
         for j in i:
@@ -45,4 +45,3 @@ def build_board():
     return board_game
 
 
-build_board()

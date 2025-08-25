@@ -3,7 +3,6 @@ FLAG_IMAGE = "flag.png"
 GRASS_IMAGE = "grass.png"
 INJURY_IMAGE = "injury.png"
 MINE_IMAGE = "mine.png"
-print("hellolo")
 SNAKE_IMAGE = "snake.png"
 SOLDIER_IMAGE = "soldier.png"
 SOLDIER_2_IMAGE = "soldier (2).png"
@@ -21,7 +20,9 @@ IMAGE_MINE_WIDTH = 3
 WINDOW_TITLE = "The Flag"
 SCREEN_SIZE = (1250, 625)
 WHITE = (255, 255, 255)
+GREEN = (16,77,7,255)
 BACKGROUND_COLOR = (9, 99, 0)
+BACKGROUND_NIGHT_COLOR = (0, 0, 0)
 FONT = "ariel"
 WELCOME = "Welcome to The Flag game."
 HAVE_FUN = "Have Fun!"
