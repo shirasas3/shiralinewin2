@@ -1,5 +1,5 @@
 import pygame
-import soldier
+import game_field
 import consts
 
 state = {
@@ -8,56 +8,47 @@ state = {
      'left':False,
      'right':False,
     'change_game' : False,
-    'running' : True
-    'touch_flag' : False
-    'touch_mine' : False
+    'running' : True,
+    'touch_flag' : False,
+    'touch_mine' : False,
 }
 
 
-def handle_user_events(player):
+def handle_user_events():
+    pygame.init()
+    keys = pygame.key.get_pressed()
+    x = 0
+    y = 0
+    if keys[pygame.K_UP]:
+        y -= 25
+    if keys[pygame.K_DOWN]:
+        y += 25
+    if keys[pygame.K_RIGHT]:
+        x += 25
+    if keys[pygame.K_LEFT]:
+        x -= 25
+    if keys[pygame.K_RETURN]:
+        state["change_game"] = True
     for event in pygame.event.get():
-
         if event.type == pygame.QUIT:
             state["running"] = False
-            pygame.quit()
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP:
-                state["up"] = True
-            elif event.key == pygame.K_DOWN:
-                state["down"] = True
-            elif event.key == pygame.K_LEFT:
-                state["left"] = True
-            elif event.key == pygame.K_RIGHT:
-                state["right"] = True
-            elif event.key == pygame.K_RETURN:
-                state["change_game"] = True
-    # if state['up']:
-    #     player.pos[1] -= 1
-    # if state['down']:
-    #     player.pos[1] += 1
-    # if state['left']:
-    #     player.pos[0] -= 1
-    # if state['right']:
-    #     player.pos[0] += 1
+    return (x,y), state["change_game"], state["running"]
 
 
 
-
-
-
-def is_win(player,flag):
-    for i in range(len(player)):
+def is_win():
+    for i in range(4):
         if i <= 2:
             for j in range(2):
-                if player[i][j] == flag[i][j]:
+                if (i,j) in game_field.index_mine(game_field.game_board):
                     return True
     return False
 
-def is_false(player,mine):
-    for i in range(len(player)):
+def is_false():
+    for i in range(4):
         if i > 2:
             for j in range(consts.LEGS_SOLDIER):
-                if player[i][j] == mine[i][j]:
+                if (i,j) in game_field.index_flag(game_field.game_board):
                     return True
     return False
 
