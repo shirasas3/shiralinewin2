@@ -6,7 +6,7 @@ MINE_IMAGE = "mine.png"
 SNAKE_IMAGE = "snake.png"
 SOLDIER_IMAGE = "soldier.png"
 SOLDIER_2_IMAGE = "soldier (2).png"
-SOLDIER_NIGHT_IMAGE =  "soldier_night.png"
+SOLDIER_NIGHT_IMAGE = "soldier_night.png"
 
 IMAGE_SOLDIER_HEIGHT = 4
 IMAGE_SOLDIER_WIDTH = 2
@@ -31,7 +31,7 @@ LOSE_MESSAGE = "You Lost"
 MASSAGE_END_TIME = 3
 VISIBLE_TIME = 1
 AMOUNT_GRASS_IMAGES = 20
-GAME_ROWS = 25
-GAME_COLS = 50
+GAME_ROWS = 50
+GAME_COLS = 25
 
 
