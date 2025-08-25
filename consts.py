@@ -35,4 +35,3 @@ GAME_ROWS = 25
 GAME_COLS = 50
 
 
-
