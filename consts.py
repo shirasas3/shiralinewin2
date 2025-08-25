@@ -3,6 +3,7 @@ FLAG_IMAGE = "flag.png"
 GRASS_IMAGE = "grass.png"
 INJURY_IMAGE = "injury.png"
 MINE_IMAGE = "mine.png"
+print("hellolo")
 SNAKE_IMAGE = "snake.png"
 SOLDIER_IMAGE = "soldier.png"
 SOLDIER_2_IMAGE = "soldier (2).png"
