@@ -37,6 +37,7 @@ def build_board():
     (22, 46)(22, 47)(22, 48)(22, 49)
     (23, 46)(23, 47)(23, 48)(23, 49)
     for i in board_game:
+
         for j in i:
             print(j, end=" ")
         print("\r")
