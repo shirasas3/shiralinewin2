@@ -16,6 +16,7 @@ state = {
 
 def handle_user_events(player):
     for event in pygame.event.get():
+
         if event.type == pygame.QUIT:
             state["running"] = False
             pygame.quit()
