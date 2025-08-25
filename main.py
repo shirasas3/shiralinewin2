@@ -1,5 +1,5 @@
 import pygame
-import screen
+import soldier
 import consts
 
 state = {
@@ -38,6 +38,9 @@ def handle_user_events(player):
     #     player.pos[0] -= 1
     # if state['right']:
     #     player.pos[0] += 1
+
+
+
 
 
 
