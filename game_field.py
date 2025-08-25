@@ -1,7 +1,8 @@
 from numpy.ma.core import append
-
+import pygame
 import consts
 import random
+import main
 
 board_game = []
 
@@ -39,7 +40,9 @@ def build_board():
             if i >= consts.GAME_COLS - consts.IMAGE_FLAG_HEIGHT:
                 if j >= consts.GAME_ROWS - consts.IMAGE_FLAG_WIDTH:
                     board_game[i][j] = "flag"
-
+            elif i < consts.IMAGE_SOLDIER_HEIGHT:
+                 if j < consts.IMAGE_SOLDIER_WIDTH:
+                    board_game[i][j] = "soldier"
     for i in board_game:
         for j in i:
             print(j, end=" ")
